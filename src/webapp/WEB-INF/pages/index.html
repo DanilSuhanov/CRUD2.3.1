@@ -7,8 +7,10 @@
 <body>
 <div>
     <th:block th:each="user : ${users}">
-        <h1 th:text="${user}"></h1>
+        <a th:href="@{/{id}(id=${user.getId()})}" th:text="${user}"></a>
+        <br>
     </th:block>
 </div>
+<a href="/new">New</a>
 </body>
 </html>
